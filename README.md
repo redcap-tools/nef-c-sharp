@@ -6,15 +6,7 @@ These functions push/pull [DataTable](https://msdn.microsoft.com/en-us/library/s
 These aren't an encapsulated class; instead copy and paste this code into your existing program.  The code has comments and console output, in an effort describe the function and intent.  (Admittedly this is rough, but Chris doesn't currently have the time to make them into classes or something more elegant, and we thought this was the best short-term solution for distributing the functions.)
 
 # Important Functions
-Here is a subset of functions in the code.  The definitions of the frequent parameters are
-```
-strRecordsSelect: Any records you want separated by ','; all records if ""
-strFields: Particular fields you want, separated by ','; all fields if ""
-strEvents: Particular events you want, separated by ','; all events if ""
-strForms: Particular forms you want, separated by ','; all forms if ""
-boolLabels: false=raw; true=label
-boolAccessGroups: false=no access group returned; true=access group returned (should be false, see note below)
-```
+Here is a subset of functions in the code.  
 
 ### `GetTableFromAnyRC`
 Get any REDCap data. Need Token and strReturnCheck (to see if error in data returning). Rest are optional  (note: can't import access group column if in your data table; ontology fields at the moment can't be imported too).
@@ -32,13 +24,13 @@ public DataTable GetTableFromAnyRC(
 ```
 
 ### `GetCSVFromTable`
-Will return a csv string to import, given a data table if given any field string (like "studyid,redcap_event_name,field1,field2") will only put those fields in the csv string
+Will return a csv string to import, given a data table if given any field string (like `"studyid,redcap_event_name,field1,field2"`) will only put those fields in the csv string.
 ```cs
 public string GetCSVFromTable(DataTable dtData, string strFields)
 ```
 
 ### `RCImportCSVFlat`
-Will import a csv string into REDCap. Remember that ONLY data exported in 'raw' mode can be imported (I think 'label' will not work)
+Will import a csv string into REDCap. Remember that ONLY data exported in 'raw' mode can be imported (I think 'label' will not work).
 ```cs
 public string RCImportCSVFlat(string strPostToken, string strCSVContents, bool boolOverwrite)
 ```
@@ -53,4 +45,15 @@ public void GetData()
 Sample SetData code.  Demonstrates how to use the above functions.
 ```cs
 public void SetData ( DataTable dtData)
+```
+
+### Frequent Parameters
+The definitions of the frequent parameters are:
+```
+strRecordsSelect: Any records you want separated by ','; all records if ""
+strFields:        Particular fields you want, separated by ','; all fields if ""
+strEvents:        Particular events you want, separated by ','; all events if ""
+strForms:         Particular forms you want, separated by ','; all forms if ""
+boolLabels:       false=raw; true=label
+boolAccessGroups: false=no access group returned; true=access group returned (should be false, see note for `GetTableFromAnyRC()`)
 ```
