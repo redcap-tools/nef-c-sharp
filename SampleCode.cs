@@ -37,10 +37,10 @@ namespace WHATEVER_NAMESPACE_YOU_ARE_USING_IN_SAMPLECODE_CS {
 
 
         // get any RC data. Need Token and strReturnCheck (to see if error in data returning). rest are optional
-        // strRecordsSelect: any records you want seperated by ','; all records if ""
-        // strFields: Particular fields you want, seperated by ','; all fields if ""
-        // strEvents: Particular events you want, seperated by ','; all events if ""
-        // strForms: Particular forms you want, seperated by ','; all forms if ""
+        // strRecordsSelect: any records you want separated by ','; all records if ""
+        // strFields: Particular fields you want, separated by ','; all fields if ""
+        // strEvents: Particular events you want, separated by ','; all events if ""
+        // strForms: Particular forms you want, separated by ','; all forms if ""
         // boolLabels: false=raw; true=label
         // boolAccessGroups: false=no access group returned; true=access group returned (should be false, see note below)
         // (note: can't import access group column if in your data table; ontology fields at the moment can't be imported too)
