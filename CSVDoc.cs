@@ -2,7 +2,7 @@ using System;
 //using System.Collections.Generic;
 using System.Text;
 
-namespace WHATEVER-NAMESPACE YOU ARE USING IN SAMPLECODE.CS
+namespace WHATEVER_NAMESPACE_YOU_ARE_USING_IN_SAMPLECODE_CS
 {
     #region CSVReadLines
     class CSVDoc

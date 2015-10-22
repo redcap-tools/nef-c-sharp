@@ -12,6 +12,8 @@ using System.Configuration;
 // the code below would be placed in your code once you have created a blank aspx page, or
 // in a windows program or wherever.
 
+namespace WHATEVER_NAMESPACE_YOU_ARE_USING_IN_SAMPLECODE_CS {
+    class SampleCode {
 
 	// must be declared somewhere in code, or pulled from config file
         // RC URI and RC Token
@@ -23,14 +25,14 @@ using System.Configuration;
         string strURI = ConfigurationManager.AppSettings["RCURI"];
         string strPostToken = ConfigurationManager.AppSettings["RCToken"];
 
-------------------------------
-	// to get the above, this would be in your Web.config file in the <configuration> section.
-	// sample shown in the Web.config file. Only if you want to do it this way.
-  <appSettings>
-    <add key="RCURI" value="YOUR_RC_API_URI" />
-    <add key="RCToken" value="YOUR_RC_TOKEN" />
-  </appSettings>
-------------------------------
+//------------------------------
+//    // to get the above, this would be in your Web.config file in the <configuration> section.
+//    // sample shown in the Web.config file. Only if you want to do it this way.
+//  <appSettings>
+//    <add key="RCURI" value="YOUR_RC_API_URI" />
+//    <add key="RCToken" value="YOUR_RC_TOKEN" />
+//  </appSettings>
+//------------------------------
 
 
 
@@ -326,7 +328,7 @@ using System.Configuration;
             return (strResponse);
         }
 
-----------------------------------------------
+//----------------------------------------------
         /// Sample GetData code. gives you an idea of how to use above functions
         public void GetData()
         {
@@ -395,3 +397,5 @@ using System.Configuration;
             }
         }
 
+    }
+}
