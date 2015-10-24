@@ -55,6 +55,7 @@ namespace WHATEVER_NAMESPACE_YOU_ARE_USING_IN_SAMPLECODE_CS {
             int intReturnLength = strReturnCheck.Trim().Length;
 
             DataTable dtDataTable = new DataTable();
+            DataRow drRecord;
 
             strPostParameters = "&content=record&format=csv&type=flat&eventName=unique";
 
